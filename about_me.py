@@ -123,23 +123,23 @@ def print_movie_genres(my_info):
     """
     # TODO: Complete function body per Step 7
     genres = [movie['genre'] for movie in my_info['movies']]
-    genre_list = ', '.join(genres)
-    if len(genre_list) > 1:
-        genre_list = genre_list.rsplit(', ', 1)
-        genre_list = ' and '.join(genre_list)
-    print(f"I like to watch {genre_list} movies.")
+    genres = ', '.join(genres)
+    if len(genres) > 1:
+        genre= genres.rsplit(', ', 1)
+        genre = ' and '.join(genre)
+    print(f"I like to watch {genres} movies.")
 
-def print_movie_titles(movie_list):
+def print_movie_titles(movies):
     """Prints a sentence listing all favourite movie titles
 
     Args:
         movie_list (list): List of favourite movies
     """
     # TODO: Complete function body per Step 8
-    titles = [movie['title'].title() for movie in movie_list]
-    title_list = ', '.join(titles)
+    movies = [movies['title'].title() for movies in movies]
+    movies= ', '.join(movies)
 
-    print(f"Some of my favourite movies are: {title_list}!")
+    print(f"Some of my favourite movies are: {movies}!")
 
 if __name__ == '__main__':
     main()
